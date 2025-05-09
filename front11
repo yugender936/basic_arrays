@@ -1,0 +1,27 @@
+public int[] front11(int[] a, int[] b) {
+  if(a.length == 0 && b.length == 0){
+    return new int[]{};
+  }
+  if(a.length > 0 && b.length == 0){
+    return new int[]{a[0]};
+  }
+  if(a.length == 0 && b.length > 0){
+    return new int[]{b[0]};
+  }
+  int[] arr = new int[2];
+  int j = 0;
+  for(int i = 0 ; i < a.length ; i++){
+      arr[j] = a[i];
+      j++;
+      break;
+  }
+  
+  
+    for(int k = 0 ; k < b.length; k++){
+      arr[j] = b[k];
+      j++;
+      break;
+    }
+
+   return arr;
+}
